@@ -1,2 +1,5 @@
+# FPS tile
+/sys/devices/virtual/graphics/fb0/measured_fps                         u:object_r:sysfs_fps:s0
+
 # IR
 /dev/peel_ir                                                  u:object_r:ir_device:s0
