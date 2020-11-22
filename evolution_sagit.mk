@@ -39,6 +39,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.sense_service=true
 
+# OTA
+PRODUCT_GENERIC_PROPERTIES += \
+    org.evolution.ota.version_code=eleven \
+    sys.ota.disable_uncrypt=1
+PRODUCT_PACKAGES += \
+    Updates
+
 PRODUCT_NAME := evolution_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
