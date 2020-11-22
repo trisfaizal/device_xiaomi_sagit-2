@@ -25,12 +25,10 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 EVO_MAINTAINER := Android Open Source Project Sagit
 EVO_SUPPORT_URL := https://pay.cooluc.com
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # GMS
-TARGET_GAPPS_ARCH=arm64
-TARGET_BOOT_ANIMATION_RES := 1080
-WITH_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 $(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
 
 # Face Unlock (AOSP-11)
