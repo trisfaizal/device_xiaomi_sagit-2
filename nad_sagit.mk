@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 # Inherit some common NAD stuff.
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
+# Nusantara Parts
+$(call inherit-product, packages/apps/NusantaraParts/nadproject.mk)
+
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
