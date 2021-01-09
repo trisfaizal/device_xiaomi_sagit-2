@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_sagit.mk
+    $(LOCAL_DIR)/komodo_sagit.mk
