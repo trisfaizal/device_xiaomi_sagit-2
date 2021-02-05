@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Fluid stuff.
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
 # GooglePinYin
 $(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
@@ -30,15 +30,25 @@ $(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
-# OTA
-$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
-
-PRODUCT_NAME := aosp_sagit
+PRODUCT_NAME := fluid_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Gapps
 TARGET_FACE_UNLOCK := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+KBUILD_BUILD_USER := trisf
+KBUILD_BUILD_HOST := xfi
+
+# Fluid specific properties
+FLUID_BUILD_TYPE := UNOFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=trisf \
+  ro.fluid.cpu=SDM835
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
