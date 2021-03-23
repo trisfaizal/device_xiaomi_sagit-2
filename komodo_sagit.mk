@@ -37,7 +37,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     org.komodo.maintainer=trisf
 
 KOMODO_VARIANT := RELEASE
-CURRENT_BUILD_TYPE := nogapps
+KOMODO_GAPPS_TYPE := gapps
 
 KBUILD_BUILD_USER := trisf
 KBUILD_BUILD_HOST := xfi
