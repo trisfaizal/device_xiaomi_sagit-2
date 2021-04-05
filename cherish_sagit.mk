@@ -44,6 +44,9 @@ TARGET_FACE_UNLOCK := true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cherish.maintainer=trisf
 
+#GApps
+TARGET_GAPPS_ARCH := arm64
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
